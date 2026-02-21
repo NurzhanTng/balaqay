@@ -70,7 +70,7 @@ export default function HomePage() {
             <p className="text-white/70 text-sm font-semibold">
               Привет, {user?.name?.split(" ")[0]} 👋
             </p>
-            <h1 className="text-white text-2xl font-black mt-0.5">KidGrow</h1>
+            <h1 className="text-white text-2xl font-black mt-0.5">Balaqay</h1>
           </div>
           <button
             onClick={() => setShowModal(true)}

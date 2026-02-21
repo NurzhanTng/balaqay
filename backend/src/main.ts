@@ -26,7 +26,7 @@ async function bootstrap(): Promise<void> {
 
   // Swagger
   const config = new DocumentBuilder()
-    .setTitle('KidGrow API')
+    .setTitle('Balaqay API')
     .setDescription('Child development assistant — REST API')
     .setVersion('1.0')
     .addBearerAuth()
@@ -36,7 +36,7 @@ async function bootstrap(): Promise<void> {
 
   const port = process.env.PORT || 3000;
   await app.listen(port);
-  console.log(`🚀 KidGrow API running on http://localhost:${port}/api/v1`);
+  console.log(`🚀 Balaqay API running on http://localhost:${port}/api/v1`);
   console.log(`📚 Swagger docs at  http://localhost:${port}/api/docs`);
 }
 

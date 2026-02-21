@@ -25,7 +25,7 @@ import { ProgressModule } from './modules/progress/progress.module';
         port: cfg.get<number>('DB_PORT', 5432),
         username: cfg.get('DB_USER', 'postgres'),
         password: cfg.get('DB_PASSWORD', 'postgres'),
-        database: cfg.get('DB_NAME', 'kidgrow'),
+        database: cfg.get('DB_NAME', 'balaqay'),
         // We use raw SQL scripts for schema, TypeORM only for ORM access
         synchronize: false,
         autoLoadEntities: true,

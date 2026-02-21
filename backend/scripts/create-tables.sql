@@ -1,6 +1,6 @@
 -- ============================================================
--- KidGrow — Create Tables
--- Run: psql -U postgres -d kidgrow -f scripts/create-tables.sql
+-- Balaqay — Create Tables
+-- Run: psql -U postgres -d balaqay -f scripts/create-tables.sql
 -- ============================================================
 
 -- Enums

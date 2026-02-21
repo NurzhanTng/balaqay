@@ -1,6 +1,6 @@
 -- ============================================================
--- KidGrow — Drop All Tables (for reset)
--- Run: psql -U postgres -d kidgrow -f scripts/drop-tables.sql
+-- Balaqay — Drop All Tables (for reset)
+-- Run: psql -U postgres -d balaqay -f scripts/drop-tables.sql
 -- ============================================================
 
 DROP VIEW  IF EXISTS progress_summary CASCADE;

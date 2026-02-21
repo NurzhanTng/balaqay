@@ -11,7 +11,7 @@ interface AuthState {
 
 const initialState: AuthState = {
   user: null,
-  token: localStorage.getItem("kidgrow_token"),
+  token: localStorage.getItem("balaqay_token"),
   loading: false,
   error: null,
 };
@@ -65,7 +65,7 @@ const authSlice = createSlice({
     logout(state) {
       state.user = null;
       state.token = null;
-      localStorage.removeItem("kidgrow_token");
+      localStorage.removeItem("balaqay_token");
     },
     clearError(state) {
       state.error = null;
@@ -80,7 +80,7 @@ const authSlice = createSlice({
       state.error = null;
       state.token = action.payload.access_token;
       state.user = action.payload.user;
-      localStorage.setItem("kidgrow_token", action.payload.access_token);
+      localStorage.setItem("balaqay_token", action.payload.access_token);
     };
 
     builder

@@ -1,5 +1,5 @@
 /**
- * KidGrow — Database Seed Script
+ * Balaqay — Database Seed Script
  * Run: npm run db:seed
  *
  * Seeds:
@@ -36,7 +36,7 @@ const AppDataSource = new DataSource({
   port: Number(process.env.DB_PORT) || 5432,
   username: process.env.DB_USER || 'postgres',
   password: process.env.DB_PASSWORD || 'postgres',
-  database: process.env.DB_NAME || 'kidgrow',
+  database: process.env.DB_NAME || 'balaqay',
   synchronize: false,
   logging: false,
 });
@@ -602,7 +602,7 @@ async function seed(): Promise<void> {
   const passwordHash = await bcrypt.hash('password', 10);
 
   const existingUser = await db.query<User[]>(
-    `SELECT id FROM users WHERE email = 'demo@kidgrow.app'`,
+    `SELECT id FROM users WHERE email = 'demo@balaqay.app'`,
   );
 
   let userId: string;
@@ -612,7 +612,7 @@ async function seed(): Promise<void> {
   } else {
     const [user] = await db.query<User[]>(
       `INSERT INTO users (email, name, password_hash)
-       VALUES ('demo@kidgrow.app','Лейла','${passwordHash}')
+       VALUES ('demo@balaqay.app','Лейла','${passwordHash}')
        RETURNING id`,
     );
     userId = user.id;
@@ -684,7 +684,7 @@ async function seed(): Promise<void> {
   await AppDataSource.destroy();
   console.log('✅ Seed complete!');
   console.log('');
-  console.log('  Demo login: demo@kidgrow.app / password');
+  console.log('  Demo login: demo@balaqay.app / password');
 }
 
 seed().catch((err) => {

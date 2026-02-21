@@ -1,16 +1,16 @@
 -- ============================================================
--- KidGrow — Create Database
+-- Balaway — Create Database
 -- Run: psql -U postgres -f scripts/create-db.sql
 -- ============================================================
 
-SELECT 'CREATE DATABASE kidgrow'
+SELECT 'CREATE DATABASE balaqay'
 WHERE NOT EXISTS (
-    SELECT FROM pg_database WHERE datname = 'kidgrow'
+    SELECT FROM pg_database WHERE datname = 'balaqay'
 )\gexec
 
-\connect kidgrow
+\connect balaqay
 
 -- Enable UUID extension
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
-\echo 'Database kidgrow ready ✓'
+\echo 'Database balaqay ready ✓'

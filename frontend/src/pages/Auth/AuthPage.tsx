@@ -61,7 +61,7 @@ export default function AuthPage() {
         <div className="text-center mb-8">
           <div className="text-6xl mb-3 animate-bounce-in">🌱</div>
           <h1 className="text-white font-black text-4xl tracking-tight">
-            KidGrow
+            Balaqay
           </h1>
           <p className="text-white/70 mt-1 font-semibold">
             Растите вместе с ребёнком
