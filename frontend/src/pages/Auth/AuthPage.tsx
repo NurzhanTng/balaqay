@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "@/store";
 import { register, login, clearError } from "@/store/slices/authSlice";
 import { Button, Input } from "@/components/ui";
+import { fetchChildren } from "@/store/slices/childrenSlice";
 
 export default function AuthPage() {
   const dispatch = useAppDispatch();
@@ -34,7 +35,14 @@ export default function AuthPage() {
       );
     }
     if (result.meta.requestStatus === "fulfilled") {
-      navigate("/onboarding");
+      const childrenResult = await dispatch(fetchChildren());
+      const children = childrenResult.payload as any[];
+      
+      if (children.length > 0) {
+        navigate("/home");      // уже есть дети → сразу на главную
+      } else {
+        navigate("/onboarding"); // новый пользователь → онбординг
+      }
     }
   };
 

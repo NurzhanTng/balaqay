@@ -149,7 +149,7 @@ npm run db:seed
 > После `db:seed` вы увидите сообщение:
 > ```
 > ✅ Seed complete!
-> Demo login: demo@kidgrow.app / Demo1234!
+> Demo login: demo@balaqay.app / password
 > ```
 
 ### 4.4 Запустите бэкенд
@@ -160,7 +160,7 @@ npm run start:dev
 
 > Вы увидите:
 > ```
-> 🚀 KidGrow API running on http://localhost:3000/api/v1
+> 🚀 Balaqay API running on http://localhost:3000/api/v1
 > 📚 Swagger docs at  http://localhost:3000/api/docs
 > ```
 
@@ -209,8 +209,8 @@ npm run dev
 ## 👉 http://localhost:5173
 
 Вы можете войти с демо-аккаунтом:
-- **Email:** `demo@kidgrow.app`
-- **Пароль:** `Demo1234!`
+- **Email:** `demo@balaqay.app`
+- **Пароль:** `password`
 
 ---
 
